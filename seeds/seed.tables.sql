@@ -28,7 +28,7 @@ VALUES
 
 INSERT INTO curveball (id, question, setting)
   VALUES 
-    (1, 'Your sister just caught the Corona Virus and requested you to bring her your specialty cup noodle with a sprinkle of spam cubes on top. Do you want to fulfill this request?', 'home'),
+    (1, 'Your friend wants to come over to share with you some eggrolls she just made. Should you open the door?', 'home'),
     (2, 'A granny just slipped on the floor. Do you want to help her get back up?', 'market'),
     (3, 'You see the cashier coughing. Do you still want to buy?', 'market'),
     (4, 'Ooh! Free cheese sample! Do you want to grab some?', 'market'),
@@ -36,7 +36,8 @@ INSERT INTO curveball (id, question, setting)
     (6, 'Someone just rang the doorbell. Should you open the door?', 'home'),
     (7, 'A child is running towards you. Do you still want to take a walk around the park?', 'park'),
     (8, 'You see a cute stubby Corgi walking by. Do you want to pet him?', 'park'),
-    (9, 'Someone wants you to help him take a quick picture using his Cannon camera. Do you want to help?', 'park');
+    (9, 'Someone wants you to help him take a quick picture using his Cannon camera. Do you want to help?', 'park'),
+    (10, 'Your neighbor is asking if you could share some of your toilet paper. Do you want to?', 'home');
 
 INSERT INTO impact (id, curveball_id, decision, health, boredom, toiletpaper, food)
   VALUES 
@@ -57,7 +58,9 @@ INSERT INTO impact (id, curveball_id, decision, health, boredom, toiletpaper, fo
   (15, 8, 'yes', 5, -15, 0, 0),
   (16, 8, 'no', -5, -5, 0, 0),
   (17, 9, 'yes', 15, -15, 0, 1),
-  (18, 9, 'no', 10, 10, 0, 0);
+  (18, 9, 'no', 10, 10, 0, 0),
+  (19, 10, 'yes', 12, -15, 1, 0),
+  (20, 10, 'no', 0, 10, 0, 0);
   
 SELECT setval('leaderboard_id_seq', (SELECT MAX(id) from "leaderboard"));
 

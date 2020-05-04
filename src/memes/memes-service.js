@@ -1,16 +1,16 @@
 const memeService = {
-  getCount(knex){
+  getCount(knex) {
     return knex.raw(`
     SELECT COUNT(*)
-    FROM memes;`)
+    FROM memes;`);
   },
 
-  getRand(knex, rand){
+  getRand(knex, rand) {
     return knex.raw(`
     SELECT *
     FROM memes
-    WHERE id = ${rand};`)
+    WHERE id = ${rand};`);
   }
-}
+};
 
 module.exports = memeService;

@@ -1,1 +1,1 @@
-DROP TABLE "leaderboard";
+DROP TABLE leaderboard;

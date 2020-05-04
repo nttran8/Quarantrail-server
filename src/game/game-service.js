@@ -1,29 +1,29 @@
-const xss = require('xss')
+const gameService = {
+  getAllInfo(knex) {
+    return knex
+      .select("*")
+      .from("gameinfo")
+      .first();
+  },
+  serializedStart(info) {
+    return {
+      id: info.id,
+      health: info.health,
+      boredom: info.boredom,
+      toiletpaper: info.toiletpaper,
+      food: info.food
+    };
+  },
 
-
-const gameService={
-    getAllInfo(knex){
-            return knex.select('*').from('gameinfo').first();
-    },
-    serializedStart(info){
-        return {
-            id:info.id,
-            health:info.health,
-            boredom:info.boredom,
-            toiletpaper:info.toiletpaper,
-            food:info.food,
-        }
-    },
-
-    getCount(knex, location){
-        return knex.raw(`
+  getCount(knex, location) {
+    return knex.raw(`
         SELECT COUNT(*)
         FROM curveball
-        WHERE setting = '${location}';`)
-    },
+        WHERE setting = '${location}';`);
+  },
 
-    getRand (knex, location, rowNum) {
-        return knex.raw(`
+  getRand(knex, location, rowNum) {
+    return knex.raw(`
         WITH tempTable AS (
             SELECT 
                 ROW_NUMBER() OVER(
@@ -37,9 +37,8 @@ const gameService={
         SELECT *
         FROM tempTable
         INNER JOIN impact ON tempTable.id = impact.curveball_id
-        AND row_num = ${rowNum};`)
-    }
-}
+        AND row_num = ${rowNum};`);
+  }
+};
 
-
-module.exports=gameService;
+module.exports = gameService;

@@ -1,15 +1,17 @@
 # QuaranTrail-Server
+
 This is the server used for the game QuaranTrail.
 
 ## Written by QuaranTeam
-+ Nghi Tran
-+ Taylor Piccarreto
-+ Robert Perez
-+ Jaye Laguardia
+
+- Nghi Tran
+- Taylor Piccarreto
+- Robert Perez
+- Jaye Laguardia
 
 ## Live Link: [QuaranTrail](https://quarantrail.now.sh/)
 
-## Client Repo Link: [Client Repo](https://github.com/thinkful-ei-jaguar/Quarantrail-client)
+## Client Repo Link: [Client Repo](https://github.com/nttran8/quarantrail-client)
 
 ### About
 
@@ -17,16 +19,16 @@ In this playful and lighthearted game, the world was struck with an awful pandem
 
 ### API Endpoints
 
-+ `/game` accepts GET and POST requests, POST request requires a body with a key of `location` and a value pair of either `home, market, or park`.
-+ `/leaderboard` accepts GET and POST requests, GET request responds with top 5 scores on the leaderboard in descending order. POST requests require a body with keys of `name` and `score`, with their values as a string and number respectively. 
-+ `/memes` accepts GET requests that returns a random meme from the DB.
+- `/game` accepts GET and POST requests, POST request requires a body with a key of `location` and a value pair of either `home, market, or park`.
+- `/leaderboard` accepts GET and POST requests, GET request responds with top 5 scores on the leaderboard in descending order. POST requests require a body with keys of `name` and `score`, with their values as a string and number respectively.
+- `/memes` accepts GET requests that returns a random meme from the DB.
 
 ### Technology Used
 
-+ Express
-+ Node.js
-+ PostgreSQL
-+ Mocha/Chai
+- Express
+- Node.js
+- PostgreSQL
+- Mocha/Chai
 
 ### Screenshots
 
@@ -34,15 +36,17 @@ In this playful and lighthearted game, the world was struck with an awful pandem
 ![image of game page](src/Images/ScreenGame.JPG)
 
 ## Scripts
-+ Start the application `npm start`
 
-+ Start nodemon for the application `npm run dev`
+- Start the application `npm start`
 
-+ Run the tests `npm test`
+- Start nodemon for the application `npm run dev`
 
-+ Migrate the Tables into database ` npm run migrate ` or ` npm run migrate:test `
+- Run the tests `npm test`
 
-+ Seed Tables with data after migration `npm run seed`
+- Migrate the Tables into database `npm run migrate` or `npm run migrate:test`
+
+- Seed Tables with data after migration `npm run seed`
 
 ## Deployment
+
 This server is deployed at `https://infinite-mesa-74719.herokuapp.com`.
