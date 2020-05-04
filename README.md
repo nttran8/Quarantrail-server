@@ -9,7 +9,7 @@ This is the server used for the game QuaranTrail to store character health, stoc
 - Robert Perez
 - Jaye Laguardia
 
-## Live Link: [QuaranTrail](https://quarantrail.now.sh/)
+## Live Link: [QuaranTrail](https://quarantrail.web.app/)
 
 ## Client Repo Link: [Client Repo](https://github.com/nttran8/quarantrail-client)
 
