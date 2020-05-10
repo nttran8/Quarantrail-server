@@ -21,7 +21,6 @@ In this playful and lighthearted game, the world was struck with an awful pandem
 
 - `/game` accepts GET and POST requests, POST request requires a body with a key of `location` and a value pair of either `home, market, or park`.
 - `/leaderboard` accepts GET and POST requests, GET request responds with top 5 scores on the leaderboard in descending order. POST requests require a body with keys of `name` and `score`, with their values as a string and number respectively.
-- `/memes` accepts GET requests that returns a random meme from the DB.
 
 ### Tech Stack
 

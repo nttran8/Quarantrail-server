@@ -35,7 +35,6 @@ describe("leaderboard endpoints", () => {
           expect(res.body.length).to.eql(10);
           for (let i = 1; i < res.body.length; i++) {
             expect(res.body[i - 1].score > res.body[i].score);
-            // console.log('res: ',res.body[i].score)
           }
         });
     });

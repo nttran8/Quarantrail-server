@@ -6,10 +6,7 @@ const helmet = require("helmet");
 const { NODE_ENV } = require("./config");
 const gameroutes = require("./game/game-router");
 const leaderboard = require("./leaderboard/leader-router");
-const memeRoute = require("./memes/memes-router");
 const app = express();
-// const chat = express()
-// const chatRoute = require('./chat/chat-router')
 
 const morganOption = NODE_ENV === "production" ? "tiny" : "common";
 
@@ -19,8 +16,6 @@ app.use(helmet());
 
 app.use("/api/leaderboard", leaderboard);
 app.use("/api/game", gameroutes);
-// chat.use('/api/chat', chatRoute)
-app.use("/api/memes", memeRoute);
 
 app.use(function errorHandler(error, req, res, next) {
   let response;
