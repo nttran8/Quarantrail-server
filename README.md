@@ -43,8 +43,9 @@ Development Tools
 
 ### Screenshots
 
-![image of start page](src/Images/ScreenStart.JPG)
-![image of game page](src/Images/ScreenGame.JPG)
+![image of landing page](src/Images/screen1.png)
+![image of market page](src/Images/screen2.png)
+![image of park page](src/Images/screen3.png)
 
 ## Scripts
 
